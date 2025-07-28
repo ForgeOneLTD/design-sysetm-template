@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System - Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-20">
+
+      <!-- Header -->
+      <section>
+        <h1 class="text-4xl font-bold mb-2">Design System Components</h1>
+        <p class="text-gray-600">A collection of foundational UI elements built with Tailwind CSS</p>
+      </section>
+
+      <!-- Accordion -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Accordion</h2>
+        <div class="border border-gray-300 rounded divide-y">
+          <details>
+            <summary class="cursor-pointer px-4 py-3 font-medium">What is this?</summary>
+            <p class="p-4 text-gray-600">An accordion is a collapsible section used to toggle visibility of content.</p>
+          </details>
+          <details>
+            <summary class="cursor-pointer px-4 py-3 font-medium">How does it work?</summary>
+            <p class="p-4 text-gray-600">It's built with the HTML <code>&lt;details&gt;</code> tag styled using Tailwind.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Alert -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Alert</h2>
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded" role="alert">
+          <strong class="font-bold">Error:</strong>
+          <span class="block sm:inline">Something went wrong. Try again later.</span>
+        </div>
+      </section>
+
+      <!-- Avatar -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Avatar</h2>
+        <div class="flex items-center space-x-4">
+          <img class="w-12 h-12 rounded-full" src="https://i.pravatar.cc/100" alt="Avatar" />
+          <div>
+            <p class="text-lg font-semibold">Jane Doe</p>
+            <p class="text-sm text-gray-500">@janedoe</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Badge -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Badge</h2>
+        <span class="inline-block bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded-full font-medium">New</span>
+      </section>
+
+      <!-- Button -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Button</h2>
+        <div class="space-x-4">
+          <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Primary</button>
+          <button class="border border-gray-300 px-4 py-2 rounded">Secondary</button>
+          <button class="bg-gray-200 text-gray-600 px-4 py-2 rounded cursor-not-allowed" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <!-- Card -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Card</h2>
+        <div class="bg-white border border-gray-200 rounded shadow-sm p-6 max-w-md">
+          <h3 class="text-xl font-semibold mb-2">Card Title</h3>
+          <p class="text-gray-600 mb-4">This is a simple card component using Tailwind classes for spacing and structure.</p>
+          <button class="text-blue-600 font-medium hover:underline">Learn More</button>
+        </div>
+      </section>
+
+      <!-- Toast / Notification -->
+      <section>
+        <h2 class="text-2xl font-bold mb-4">Toast (Static Preview)</h2>
+        <div class="fixed bottom-6 right-6 bg-white shadow-lg border border-gray-200 px-4 py-3 rounded w-72">
+          <div class="flex items-start gap-2">
+            <div class="mt-1">
+              <svg class="h-5 w-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <p class="font-semibold">Success</p>
+              <p class="text-sm text-gray-600">Your changes were saved!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+      <!-- ============================= -->
+      <!-- FOUNDATION -->
+      <!-- ============================= -->
+
+      <!-- Typography -->
+      <section id="typography" class="scroll-mt-24">
+        <h2 class="text-3xl font-bold mb-6">Typography</h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="space-y-4">
+            <h1 class="text-5xl font-bold">H1 Headline</h1>
+            <h2 class="text-4xl font-semibold">H2 Headline</h2>
+            <h3 class="text-3xl font-semibold">H3 Headline</h3>
+            <h4 class="text-2xl font-semibold">H4 Headline</h4>
+            <h5 class="text-xl font-semibold">H5 Headline</h5>
+            <h6 class="text-lg font-semibold">H6 Headline</h6>
+          </div>
+          <div class="space-y-4">
+            <p class="text-base leading-7">Body / Base — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <p class="text-sm text-gray-600">Body Small — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
+            <p class="text-xs uppercase tracking-wider text-gray-500">Caption / Overline</p>
+            <code class="block text-sm bg-gray-100 border border-gray-200 rounded p-3">Code / Mono</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- Breadcrumb -->
+      <section id="breadcrumb" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Breadcrumb</h2>
+        <nav class="text-sm text-gray-600" aria-label="Breadcrumb">
+          <ol class="flex items-center flex-wrap gap-2">
+            <li><a href="#" class="hover:underline">Home</a></li>
+            <li class="text-gray-400">/</li>
+            <li><a href="#" class="hover:underline">Library</a></li>
+            <li class="text-gray-400">/</li>
+            <li aria-current="page" class="text-gray-900 font-medium">Components</li>
+          </ol>
+        </nav>
+      </section>
+
+      <!-- Separator -->
+      <section id="separator" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Separator</h2>
+        <div class="space-y-6">
+          <div class="h-px bg-gray-200"></div>
+          <div class="h-0.5 bg-gray-300"></div>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- FEEDBACK -->
+      <!-- ============================= -->
+
+      <!-- Alert -->
+      <section id="alert" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Alert</h2>
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="rounded border border-green-300 bg-green-50 px-4 py-3 text-green-800">
+            <p class="font-semibold">Success</p>
+            <p class="text-sm">Your changes have been saved.</p>
+          </div>
+          <div class="rounded border border-red-300 bg-red-50 px-4 py-3 text-red-800">
+            <p class="font-semibold">Error</p>
+            <p class="text-sm">We couldn't save your changes.</p>
+          </div>
+          <div class="rounded border border-yellow-300 bg-yellow-50 px-4 py-3 text-yellow-800">
+            <p class="font-semibold">Warning</p>
+            <p class="text-sm">Double‑check the form inputs.</p>
+          </div>
+          <div class="rounded border border-blue-300 bg-blue-50 px-4 py-3 text-blue-800">
+            <p class="font-semibold">Info</p>
+            <p class="text-sm">A new update is available.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast / Sonner (static) -->
+      <section id="toast" class="scroll-mt-24 relative">
+        <h2 class="text-2xl font-bold mb-4">Toast / Sonner (static preview)</h2>
+        <div class="flex gap-4 flex-wrap">
+          <button id="showToast" class="bg-gray-900 text-white px-4 py-2 rounded">Show toast</button>
+          <button id="showToastSuccess" class="bg-green-600 text-white px-4 py-2 rounded">Show success</button>
+        </div>
+        <div id="toastHost" class="fixed bottom-6 right-6 space-y-2 z-50"></div>
+      </section>
+
+      <!-- Progress -->
+      <section id="progress" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Progress</h2>
+        <div class="w-full max-w-xl space-y-3">
+          <div class="h-2 w-full rounded bg-gray-200 overflow-hidden">
+            <div class="h-full w-1/3 bg-blue-600"></div>
+          </div>
+          <div class="h-2 w-full rounded bg-gray-200 overflow-hidden">
+            <div class="h-full w-2/3 bg-green-600"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skeleton -->
+      <section id="skeleton" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Skeleton</h2>
+        <div class="max-w-md space-y-3 animate-pulse">
+          <div class="h-6 w-1/3 rounded bg-gray-200"></div>
+          <div class="h-4 w-full rounded bg-gray-200"></div>
+          <div class="h-4 w-5/6 rounded bg-gray-200"></div>
+          <div class="h-48 w-full rounded bg-gray-200"></div>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- MEDIA & LAYOUT -->
+      <!-- ============================= -->
+
+      <!-- Aspect Ratio -->
+      <section id="aspect-ratio" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Aspect Ratio</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-gray-200 rounded overflow-hidden relative" style="padding-top:56.25%">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="16:9" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+          <div class="bg-gray-200 rounded overflow-hidden relative" style="padding-top:100%">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop" alt="1:1" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+          <div class="bg-gray-200 rounded overflow-hidden relative" style="padding-top:125%">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1200&auto=format&fit=crop" alt="4:5" class="absolute inset-0 h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Avatar -->
+      <section id="avatar" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Avatar</h2>
+        <div class="flex items-center gap-6">
+          <img class="h-10 w-10 rounded-full object-cover" src="https://i.pravatar.cc/80?img=5" alt="Avatar" />
+          <img class="h-12 w-12 rounded-full object-cover ring-2 ring-white shadow" src="https://i.pravatar.cc/80?img=9" alt="Avatar" />
+          <div class="relative">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://i.pravatar.cc/80?img=15" alt="Avatar" />
+            <span class="absolute -right-0 -bottom-0 h-3 w-3 rounded-full bg-green-500 ring-2 ring-white"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Badge -->
+      <section id="badge" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Badge</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">Default</span>
+          <span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-1 text-xs font-medium text-blue-700">Info</span>
+          <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-medium text-green-700">Success</span>
+          <span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-1 text-xs font-medium text-yellow-700">Warning</span>
+          <span class="inline-flex items-center rounded-full bg-red-100 px-2.5 py-1 text-xs font-medium text-red-700">Destructive</span>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section id="card" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Card</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="rounded border bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold">Card Title</h3>
+            <p class="mt-2 text-sm text-gray-600">Simple container with border and shadow.</p>
+            <button class="mt-4 rounded bg-gray-900 px-4 py-2 text-white">Action</button>
+          </article>
+          <article class="overflow-hidden rounded border bg-white shadow-sm">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop" class="h-40 w-full object-cover" alt="" />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold">Media Card</h3>
+              <p class="mt-2 text-sm text-gray-600">Image header with body content.</p>
+            </div>
+          </article>
+          <article class="rounded bg-gray-900 p-6 text-white">
+            <h3 class="text-lg font-semibold">Inverted Card</h3>
+            <p class="mt-2 text-sm text-gray-300">Dark card for contrast sections.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Carousel (basic) -->
+      <section id="carousel" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Carousel (basic)</h2>
+        <div class="relative overflow-hidden rounded border bg-white shadow-sm">
+          <div id="carouselTrack" class="flex transition-transform duration-300">
+            <img class="h-56 w-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1520975938318-8c3d93c06a93?q=80&w=1200&auto=format&fit=crop" alt="slide1" />
+            <img class="h-56 w-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="slide2" />
+            <img class="h-56 w-full object-cover flex-shrink-0" src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=1200&auto=format&fit=crop" alt="slide3" />
+          </div>
+          <div class="absolute inset-0 flex items-center justify-between px-3">
+            <button id="carouselPrev" class="rounded bg-white/80 px-3 py-1 text-sm shadow">Prev</button>
+            <button id="carouselNext" class="rounded bg-white/80 px-3 py-1 text-sm shadow">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chart (inline SVG) -->
+      <section id="chart" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Chart (SVG preview)</h2>
+        <div class="rounded border bg-white p-6 shadow-sm">
+          <svg viewBox="0 0 400 160" class="w-full">
+            <rect x="0" y="0" width="400" height="160" fill="white" />
+            <g stroke="#e5e7eb">
+              <line x1="40" y1="20" x2="40" y2="140" />
+              <line x1="40" y1="140" x2="380" y2="140" />
+            </g>
+            <g fill="#3b82f6">
+              <rect x="60" y="80" width="40" height="60" rx="4" />
+              <rect x="130" y="40" width="40" height="100" rx="4" />
+              <rect x="200" y="60" width="40" height="80" rx="4" />
+              <rect x="270" y="20" width="40" height="120" rx="4" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- INPUTS & FORMS -->
+      <!-- ============================= -->
+
+      <!-- Buttons -->
+      <section id="button" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Button</h2>
+        <div class="flex flex-wrap gap-3">
+          <button class="rounded bg-gray-900 px-4 py-2 text-white hover:bg-black">Primary</button>
+          <button class="rounded border border-gray-300 bg-white px-4 py-2 hover:bg-gray-50">Secondary</button>
+          <button class="rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Info</button>
+          <button class="rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700">Destructive</button>
+          <button class="rounded bg-gray-200 px-4 py-2 text-gray-600" disabled>Disabled</button>
+          <button class="inline-flex items-center gap-2 rounded border border-gray-300 bg-white px-4 py-2"><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zM9 9V5h2v4h4v2h-4v4H9v-4H5V9h4z"/></svg> With icon</button>
+        </div>
+      </section>
+
+      <!-- Input / Textarea / Label -->
+      <section id="input" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Input, Textarea & Label</h2>
+        <form class="grid gap-6 md:grid-cols-2">
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-gray-700">Email</label>
+            <input type="email" placeholder="you@example.com" class="w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20" />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-gray-700">Password</label>
+            <input type="password" placeholder="••••••••" class="w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20" />
+          </div>
+          <div class="space-y-2 md:col-span-2">
+            <label class="text-sm font-medium text-gray-700">Message</label>
+            <textarea rows="4" class="w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20" placeholder="Write something..."></textarea>
+          </div>
+        </form>
+      </section>
+
+      <!-- Input OTP -->
+      <section id="input-otp" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Input OTP</h2>
+        <div class="flex gap-3" data-otp>
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+          <input maxlength="1" class="h-12 w-12 rounded border border-gray-300 text-center text-xl" />
+        </div>
+      </section>
+
+      <!-- Checkbox / Radio / Switch -->
+      <section id="checkbox-radio-switch" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Checkbox, Radio Group, Switch</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600" checked /><span>Remember me</span></label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-blue-600" /><span>Email me updates</span></label>
+          </div>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="radio" name="plan" class="h-4 w-4 border-gray-300 text-blue-600" checked /><span>Monthly</span></label>
+            <label class="flex items-center gap-3"><input type="radio" name="plan" class="h-4 w-4 border-gray-300 text-blue-600" /><span>Yearly</span></label>
+          </div>
+          <div class="space-y-3">
+            <label class="relative inline-flex cursor-pointer items-center">
+              <input type="checkbox" value="" class="peer sr-only" checked>
+              <div class="h-6 w-11 rounded-full bg-gray-200 peer-checked:bg-blue-600 peer-focus:outline-none"></div>
+              <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5"></span>
+              <span class="ml-3 text-sm">Notifications</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- Select / Combobox / Dropdown / Menubar / Navigation Menu -->
+      <section id="select-combobox" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Select, Combobox, Dropdown, Menubar, Navigation</h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="space-y-4">
+            <label class="text-sm font-medium">Select</label>
+            <select class="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none">
+              <option>Apple</option>
+              <option>Banana</option>
+              <option>Orange</option>
+            </select>
+
+            <label class="text-sm font-medium">Combobox (filterable)</label>
+            <div class="relative">
+              <input id="comboInput" class="w-full rounded border border-gray-300 px-3 py-2" placeholder="Type to filter..." />
+              <ul id="comboList" class="absolute z-10 mt-1 hidden max-h-48 w-full overflow-auto rounded border bg-white shadow">
+                <li class="px-3 py-2 hover:bg-gray-50">Apple</li>
+                <li class="px-3 py-2 hover:bg-gray-50">Banana</li>
+                <li class="px-3 py-2 hover:bg-gray-50">Orange</li>
+                <li class="px-3 py-2 hover:bg-gray-50">Grape</li>
+                <li class="px-3 py-2 hover:bg-gray-50">Mango</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="relative inline-block text-left">
+              <button id="dropdownBtn" class="rounded border border-gray-300 bg-white px-4 py-2">Dropdown Menu</button>
+              <div id="dropdownMenu" class="absolute right-0 z-20 mt-2 hidden w-44 rounded border bg-white py-1 text-sm shadow">
+                <a href="#" class="block px-3 py-2 hover:bg-gray-50">Profile</a>
+                <a href="#" class="block px-3 py-2 hover:bg-gray-50">Settings</a>
+                <div class="my-1 h-px bg-gray-200"></div>
+                <a href="#" class="block px-3 py-2 text-red-600 hover:bg-red-50">Logout</a>
+              </div>
+            </div>
+
+            <div class="border rounded">
+              <div class="flex divide-x">
+                <button class="px-4 py-2 hover:bg-gray-50">File</button>
+                <button class="px-4 py-2 hover:bg-gray-50">Edit</button>
+                <button class="px-4 py-2 hover:bg-gray-50">View</button>
+              </div>
+            </div>
+
+            <nav class="rounded border bg-white p-2 shadow-sm">
+              <ul class="flex gap-2">
+                <li><a class="rounded px-3 py-2 text-sm font-medium hover:bg-gray-50" href="#">Dashboard</a></li>
+                <li><a class="rounded px-3 py-2 text-sm font-medium hover:bg-gray-50" href="#">Projects</a></li>
+                <li><a class="rounded px-3 py-2 text-sm font-medium hover:bg-gray-50" href="#">Team</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar / Date Picker -->
+      <section id="calendar" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Calendar & Date Picker</h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded border bg-white p-4 shadow-sm">
+            <header class="mb-3 flex items-center justify-between">
+              <button id="calPrev" class="rounded border px-2 py-1 text-sm">Prev</button>
+              <h3 id="calTitle" class="text-sm font-semibold">July 2025</h3>
+              <button id="calNext" class="rounded border px-2 py-1 text-sm">Next</button>
+            </header>
+            <div class="grid grid-cols-7 gap-1 text-center text-xs text-gray-500">
+              <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+            </div>
+            <div id="calGrid" class="mt-1 grid grid-cols-7 gap-1 text-center text-sm"></div>
+          </div>
+
+          <div class="space-y-2">
+            <label class="text-sm font-medium">Date Picker (input)</label>
+            <input id="dateInput" type="date" class="w-full rounded border border-gray-300 px-3 py-2" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs -->
+      <section id="tabs" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Tabs</h2>
+        <div class="max-w-2xl">
+          <div class="flex border-b">
+            <button class="tab-btn active px-4 py-2 text-sm font-medium" data-tab="tab1">First</button>
+            <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500" data-tab="tab2">Second</button>
+            <button class="tab-btn px-4 py-2 text-sm font-medium text-gray-500" data-tab="tab3">Third</button>
+          </div>
+          <div class="tab-panel p-4" id="tab1">Content for first tab.</div>
+          <div class="tab-panel hidden p-4" id="tab2">Second tab content.</div>
+          <div class="tab-panel hidden p-4" id="tab3">Third tab content.</div>
+        </div>
+      </section>
+
+      <!-- Dialog / Alert Dialog / Drawer / Sheet / Popover / Tooltip / Hover Card -->
+      <section id="dialogs" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Dialog Variants</h2>
+        <div class="flex flex-wrap gap-4">
+          <button data-open="dialog" class="rounded bg-gray-900 px-4 py-2 text-white">Open Dialog</button>
+          <button data-open="alertDialog" class="rounded bg-red-600 px-4 py-2 text-white">Open Alert Dialog</button>
+          <button data-open="drawer" class="rounded border px-4 py-2">Open Drawer</button>
+          <button data-open="sheet" class="rounded border px-4 py-2">Open Sheet</button>
+          <button id="popoverBtn" class="rounded border px-4 py-2">Popover</button>
+          <button id="hoverCardBtn" class="rounded border px-4 py-2 relative">Hover Card</button>
+          <button id="tooltipBtn" class="rounded border px-4 py-2 relative">Tooltip</button>
+        </div>
+
+        <!-- Dialog -->
+        <div id="dialog" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4">
+          <div class="w-full max-w-md rounded bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold">Dialog Title</h3>
+            <p class="mt-2 text-sm text-gray-600">This is a simple dialog.</p>
+            <div class="mt-6 flex justify-end gap-2">
+              <button data-close class="rounded border px-3 py-1.5">Cancel</button>
+              <button class="rounded bg-gray-900 px-3 py-1.5 text-white">Confirm</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert Dialog -->
+        <div id="alertDialog" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4">
+          <div class="w-full max-w-md rounded bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-red-600">Delete item?</h3>
+            <p class="mt-2 text-sm text-gray-600">This action cannot be undone.</p>
+            <div class="mt-6 flex justify-end gap-2">
+              <button data-close class="rounded border px-3 py-1.5">Cancel</button>
+              <button class="rounded bg-red-600 px-3 py-1.5 text-white">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drawer (left) -->
+        <div id="drawer" class="fixed inset-0 z-50 hidden bg-black/50">
+          <div class="h-full w-80 bg-white p-6 shadow">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Drawer</h3>
+              <button data-close class="rounded border px-2 py-1 text-sm">Close</button>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">Side panel content.</p>
+          </div>
+        </div>
+
+        <!-- Sheet (bottom) -->
+        <div id="sheet" class="fixed inset-0 z-50 hidden bg-black/50">
+          <div class="absolute bottom-0 left-0 right-0 rounded-t-2xl bg-white p-6 shadow-xl">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Sheet</h3>
+              <button data-close class="rounded border px-2 py-1 text-sm">Close</button>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">Bottom sheet content.</p>
+          </div>
+        </div>
+
+        <!-- Popover -->
+        <div id="popover" class="absolute z-50 hidden w-64 rounded border bg-white p-3 text-sm shadow"></div>
+
+        <!-- Hover Card -->
+        <div id="hoverCard" class="absolute z-50 hidden w-64 rounded border bg-white p-3 text-sm shadow">This appears on hover.</div>
+
+        <!-- Tooltip -->
+        <div id="tooltip" class="pointer-events-none absolute z-50 hidden rounded bg-gray-900 px-2 py-1 text-xs text-white">Tooltip text</div>
+      </section>
+
+      <!-- Pagination -->
+      <section id="pagination" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Pagination</h2>
+        <div class="flex items-center gap-2">
+          <button class="rounded border px-3 py-1.5">Prev</button>
+          <button class="rounded bg-gray-900 px-3 py-1.5 text-white">1</button>
+          <button class="rounded border px-3 py-1.5">2</button>
+          <button class="rounded border px-3 py-1.5">3</button>
+          <button class="rounded border px-3 py-1.5">Next</button>
+        </div>
+      </section>
+
+      <!-- Table / Data Table -->
+      <section id="table" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Table & Data Table</h2>
+        <div class="overflow-x-auto rounded border">
+          <table class="min-w-full divide-y divide-gray-200 text-sm">
+            <thead class="bg-gray-50 text-gray-700">
+              <tr>
+                <th class="px-4 py-2 text-left">Name</th>
+                <th class="px-4 py-2 text-left">Title</th>
+                <th class="px-4 py-2 text-left">Email</th>
+                <th class="px-4 py-2 text-left">Role</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-4 py-2">Lindsay Walton</td>
+                <td class="px-4 py-2">Front-end Developer</td>
+                <td class="px-4 py-2">lindsay@example.com</td>
+                <td class="px-4 py-2"><span class="rounded bg-green-100 px-2 py-1 text-xs text-green-800">Member</span></td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">Courtney Henry</td>
+                <td class="px-4 py-2">Designer</td>
+                <td class="px-4 py-2">courtney@example.com</td>
+                <td class="px-4 py-2"><span class="rounded bg-gray-100 px-2 py-1 text-xs">Viewer</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Command / Context Menu -->
+      <section id="command-context" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Command Palette & Context Menu</h2>
+        <button id="openCommand" class="rounded border px-4 py-2">Open Command (⌘K)</button>
+        <div id="command" class="fixed inset-0 z-50 hidden bg-black/50 p-4">
+          <div class="mx-auto w-full max-w-xl rounded bg-white p-4 shadow">
+            <input class="w-full rounded border border-gray-300 px-3 py-2" placeholder="Search commands..." />
+            <ul class="mt-3 divide-y rounded border">
+              <li class="px-3 py-2 hover:bg-gray-50">Create file</li>
+              <li class="px-3 py-2 hover:bg-gray-50">Open settings</li>
+              <li class="px-3 py-2 hover:bg-gray-50">Toggle theme</li>
+            </ul>
+          </div>
+        </div>
+        <div id="contextArea" class="mt-6 rounded border bg-white p-6 text-sm text-gray-600">Right‑click here for context menu.</div>
+        <ul id="contextMenu" class="absolute z-50 hidden w-48 rounded border bg-white py-1 text-sm shadow">
+          <li class="px-3 py-2 hover:bg-gray-50">Copy</li>
+          <li class="px-3 py-2 hover:bg-gray-50">Paste</li>
+          <li class="px-3 py-2 hover:bg-gray-50">Delete</li>
+        </ul>
+      </section>
+
+      <!-- Resizable / Scroll Area -->
+      <section id="resizable-scroll" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Resizable & Scroll Area</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="resize rounded border bg-white p-4 shadow-sm overflow-auto" style="min-width:200px; min-height:120px; max-height:200px;">
+            <p class="text-sm">Drag the bottom-right corner to resize me.</p>
+            <p class="mt-2 text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, laboriosam.</p>
+          </div>
+          <div class="h-48 overflow-auto rounded border bg-white p-4 shadow-sm">
+            <div class="space-y-3 text-sm">
+              <p>Scrollable content line 1</p>
+              <p>Scrollable content line 2</p>
+              <p>Scrollable content line 3</p>
+              <p>Scrollable content line 4</p>
+              <p>Scrollable content line 5</p>
+              <p>Scrollable content line 6</p>
+              <p>Scrollable content line 7</p>
+              <p>Scrollable content line 8</p>
+              <p>Scrollable content line 9</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <section id="sidebar" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Sidebar</h2>
+        <div class="grid gap-6 md:grid-cols-[240px_1fr]">
+          <aside class="rounded border bg-white p-4 shadow-sm">
+            <nav class="space-y-1 text-sm">
+              <a class="block rounded px-3 py-2 font-medium bg-gray-100" href="#">Overview</a>
+              <a class="block rounded px-3 py-2 hover:bg-gray-50" href="#">Settings</a>
+              <a class="block rounded px-3 py-2 hover:bg-gray-50" href="#">Billing</a>
+            </nav>
+          </aside>
+          <div class="rounded border bg-white p-6 shadow-sm">
+            <p class="text-sm text-gray-600">Main content area.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider -->
+      <section id="slider" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Slider</h2>
+        <input type="range" min="0" max="100" value="40" class="w-full" />
+      </section>
+
+      <!-- Pagination already added above -->
+
+      <!-- Collapsible -->
+      <section id="collapsible" class="scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4">Collapsible</h2>
+        <details class="rounded border bg-white p-4 shadow-sm">
+          <summary class="cursor-pointer select-none text-sm font-medium">Show details</summary>
+          <div class="mt-3 text-sm text-gray-600">Hidden content inside the collapsible.</div>
+        </details>
+      </section>
+
+      <!-- Popover demo content fill -->
+      <template id="popoverTemplate">
+        <p class="font-medium">Popover title</p>
+        <p class="mt-1 text-gray-600">Small contextual panel anchored to a button.</p>
+      </template>
+
+      <!-- Hover card template -->
+      <template id="hoverCardTemplate">
+        <div class="flex items-center gap-3">
+          <img class="h-10 w-10 rounded-full" src="https://i.pravatar.cc/80?img=12" alt="" />
+          <div>
+            <p class="font-medium">Hover User</p>
+            <p class="text-xs text-gray-600">hover@company.com</p>
+          </div>
+        </div>
+      </template>
+
+      <!-- Context Menu template already handled with list -->
+
+      <!-- END MAIN -->
+    </main>
+
+    <script>
+      // Toast helper
+      function makeToast(message, color = 'gray') {
+        const host = document.getElementById('toastHost');
+        const node = document.createElement('div');
+        node.className = `rounded border border-${color}-200 bg-white shadow px-4 py-3 text-sm flex items-start gap-2`;
+        node.innerHTML = `<span class=\"mt-0.5 h-2 w-2 rounded-full bg-${color}-500\"></span><div>${message}</div>`;
+        host.appendChild(node);
+        setTimeout(() => { node.remove(); }, 3000);
+      }
+      document.getElementById('showToast')?.addEventListener('click', () => makeToast('Neutral toast', 'gray'));
+      document.getElementById('showToastSuccess')?.addEventListener('click', () => makeToast('Saved successfully', 'green'));
+
+      // Tabs
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-tab');
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','text-blue-600','border-b-2','border-blue-600'));
+          btn.classList.add('active','text-blue-600','border-b-2','border-blue-600');
+          document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+          document.getElementById(id)?.classList.remove('hidden');
+        });
+      });
+
+      // Simple carousel
+      (function(){
+        const track = document.getElementById('carouselTrack');
+        if(!track) return;
+        let index = 0;
+        const slides = track.children.length;
+        const update = ()=> track.style.transform = `translateX(-${index * 100}%)`;
+        document.getElementById('carouselPrev')?.addEventListener('click', ()=>{ index = (index - 1 + slides) % slides; update(); });
+        document.getElementById('carouselNext')?.addEventListener('click', ()=>{ index = (index + 1) % slides; update(); });
+      })();
+
+      // Dropdown
+      const dropdownBtn = document.getElementById('dropdownBtn');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      dropdownBtn?.addEventListener('click', (e)=>{ e.stopPropagation(); dropdownMenu.classList.toggle('hidden'); });
+      document.addEventListener('click', ()=> dropdownMenu?.classList.add('hidden'));
+
+      // Combobox
+      const comboInput = document.getElementById('comboInput');
+      const comboList = document.getElementById('comboList');
+      comboInput?.addEventListener('focus', ()=> comboList.classList.remove('hidden'));
+      comboInput?.addEventListener('input', ()=>{
+        const q = comboInput.value.toLowerCase();
+        comboList.querySelectorAll('li').forEach(li => {
+          li.classList.toggle('hidden', !li.textContent.toLowerCase().includes(q));
+        });
+      });
+      document.addEventListener('click', (e)=>{
+        if(!comboList?.contains(e.target) && e.target !== comboInput){ comboList?.classList.add('hidden'); }
+      });
+      comboList?.addEventListener('click', (e)=>{
+        if(e.target.tagName === 'LI'){ comboInput.value = e.target.textContent; comboList.classList.add('hidden'); }
+      });
+
+      // Dialogs, Alert Dialog, Drawer, Sheet
+      document.querySelectorAll('[data-open]').forEach(btn => {
+        btn.addEventListener('click', ()=>{
+          const id = btn.getAttribute('data-open');
+          const el = document.getElementById(id);
+          el?.classList.remove('hidden');
+          el?.classList.add('flex');
+        });
+      });
+      document.querySelectorAll('[data-close]').forEach(btn => {
+        btn.addEventListener('click', ()=>{
+          const container = btn.closest('#dialog, #alertDialog, #drawer, #sheet, #command');
+          if(container){ container.classList.add('hidden'); container.classList.remove('flex'); }
+        });
+      });
+      ['dialog','alertDialog','drawer','sheet','command'].forEach(id => {
+        const el = document.getElementById(id);
+        el?.addEventListener('click', (e)=>{ if(e.target === el){ el.classList.add('hidden'); el.classList.remove('flex'); } });
+      });
+
+      // Popover
+      const popover = document.getElementById('popover');
+      const popoverBtn = document.getElementById('popoverBtn');
+      const popoverTemplate = document.getElementById('popoverTemplate');
+      popoverBtn?.addEventListener('click', (e)=>{
+        if(!popover) return;
+        popover.innerHTML = popoverTemplate.innerHTML;
+        popover.style.left = `${e.target.getBoundingClientRect().left}px`;
+        popover.style.top = `${e.target.getBoundingClientRect().bottom + window.scrollY + 8}px`;
+        popover.classList.toggle('hidden');
+      });
+
+      // Hover Card
+      const hoverBtn = document.getElementById('hoverCardBtn');
+      const hoverCard = document.getElementById('hoverCard');
+      const hoverTpl = document.getElementById('hoverCardTemplate');
+      function positionHover(el){
+        const r = hoverBtn.getBoundingClientRect();
+        hoverCard.style.left = `${r.left}px`;
+        hoverCard.style.top = `${r.bottom + window.scrollY + 8}px`;
+      }
+      hoverBtn?.addEventListener('mouseenter', ()=>{ hoverCard.innerHTML = hoverTpl.innerHTML; positionHover(); hoverCard.classList.remove('hidden'); });
+      hoverBtn?.addEventListener('mouseleave', ()=>{ hoverCard.classList.add('hidden'); });
+
+      // Tooltip
+      const tooltipBtn = document.getElementById('tooltipBtn');
+      const tooltip = document.getElementById('tooltip');
+      tooltipBtn?.addEventListener('mouseenter', ()=>{
+        const r = tooltipBtn.getBoundingClientRect();
+        tooltip.style.left = `${r.left + r.width/2 - 40}px`;
+        tooltip.style.top = `${r.top + window.scrollY - 32}px`;
+        tooltip.classList.remove('hidden');
+      });
+      tooltipBtn?.addEventListener('mouseleave', ()=> tooltip.classList.add('hidden'));
+
+      // Command palette
+      const openCmd = document.getElementById('openCommand');
+      const cmd = document.getElementById('command');
+      openCmd?.addEventListener('click', ()=>{ cmd.classList.remove('hidden'); cmd.classList.add('flex'); });
+      document.addEventListener('keydown', (e)=>{
+        if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); cmd.classList.remove('hidden'); cmd.classList.add('flex'); }
+        if(e.key === 'Escape'){ cmd?.classList.add('hidden'); cmd?.classList.remove('flex'); dropdownMenu?.classList.add('hidden'); popover?.classList.add('hidden'); }
+      });
+
+      // Context menu
+      const contextArea = document.getElementById('contextArea');
+      const contextMenu = document.getElementById('contextMenu');
+      contextArea?.addEventListener('contextmenu', (e)=>{
+        e.preventDefault();
+        contextMenu.style.left = `${e.pageX}px`;
+        contextMenu.style.top = `${e.pageY}px`;
+        contextMenu.classList.remove('hidden');
+      });
+      document.addEventListener('click', ()=> contextMenu?.classList.add('hidden'));
+
+      // Simple calendar month rendering
+      (function(){
+        const grid = document.getElementById('calGrid');
+        const title = document.getElementById('calTitle');
+        if(!grid) return;
+        let date = new Date();
+        date.setDate(1);
+        function render(){
+          grid.innerHTML = '';
+          const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+          title.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+          const startDay = date.getDay();
+          const daysInMonth = new Date(date.getFullYear(), date.getMonth()+1, 0).getDate();
+          for(let i=0;i<startDay;i++) grid.appendChild(document.createElement('div'));
+          for(let d=1; d<=daysInMonth; d++){
+            const cell = document.createElement('button');
+            cell.textContent = d;
+            cell.className = 'h-10 w-full rounded hover:bg-gray-100';
+            grid.appendChild(cell);
+          }
+        }
+        render();
+        document.getElementById('calPrev')?.addEventListener('click', ()=>{ date.setMonth(date.getMonth()-1); render(); });
+        document.getElementById('calNext')?.addEventListener('click', ()=>{ date.setMonth(date.getMonth()+1); render(); });
+      })();
+
+      // OTP auto-advance
+      document.querySelectorAll('[data-otp] input').forEach((input, idx, arr)=>{
+        input.addEventListener('input', ()=>{ if(input.value && arr[idx+1]) arr[idx+1].focus(); });
+        input.addEventListener('keydown', (e)=>{ if(e.key==='Backspace' && !input.value && arr[idx-1]) arr[idx-1].focus(); });
+      });
+    </script>
+  </body>
+</html>
